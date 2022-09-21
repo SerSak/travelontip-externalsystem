@@ -1,0 +1,4 @@
+%dw 2.0
+
+type auto_79b4425a_ad71_4bc2_8d65_8f59a37064bf_Output_Payload = Array<{|  origin: String | Null,   destination: String | Null,   company: String | Null|}>
+
