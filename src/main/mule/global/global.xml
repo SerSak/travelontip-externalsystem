@@ -9,7 +9,7 @@ http://www.mulesoft.org/schema/mule/db http://www.mulesoft.org/schema/mule/db/cu
 	<http:listener-config name="HTTP_Listener_config" doc:name="HTTP Listener config" doc:id="59c97e5e-7791-4409-8a2d-d813daabdd41" >
 		<http:listener-connection host="${http.listener.host}" port="${http.listener.port}" />
 	</http:listener-config>
-	<configuration-properties doc:name="Configuration properties" doc:id="2de2ae9d-06ba-4262-9e96-912e01039027" file="config\local.yaml" />
+	<configuration-properties doc:name="Configuration properties" doc:id="2de2ae9d-06ba-4262-9e96-912e01039027" file="config/${mule_env}.yaml" />
 	<db:config name="Database_Config" doc:name="Database Config" doc:id="1858ee1c-d891-4510-8ecb-1d65632c90d7" >
 		<db:oracle-connection host="${db.oracle.host}" port="${db.oracle.port}" user="${db.oracle.user}" password="${db.oracle.password}" instance="${db.oracle.instance}"/>
 	</db:config>
