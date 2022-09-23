@@ -29,11 +29,11 @@ attributes.headers.transactionId]]></ee:set-variable>
 		<choice doc:name="Choice" doc:id="99b85aef-f8ec-4220-8c35-b7329a4ae76e" >
 			<when expression='#[vars.serviceType == "routes"]'>
 				<logger level="INFO" doc:name="Logger" doc:id="56396437-41fb-4005-af3a-1caad869b771" message="Routes Flow Called for TravelOnTip External System for TransactionId: #[vars.transactionId]"/>
-				<flow-ref doc:name="Flow Reference" doc:id="62cf52d6-7c2c-4c13-ab06-64574cad895b" name="TravelOnTip-GetRoutes-implementationSub_Flow"/>
+				<flow-ref doc:name="Routes" doc:id="62cf52d6-7c2c-4c13-ab06-64574cad895b" name="TravelOnTip-GetRoutes-implementationSub_Flow"/>
 			</when>
 			<when expression='#[vars.serviceType == "schedules"]'>
 				<logger level="INFO" doc:name="Logger" doc:id="9899ad0c-ad38-403c-bc09-2d5abbb22c19" message="Schedules Flow Called for TravelOnTip External System for TransactionId: #[vars.transactionId]"/>
-				<flow-ref doc:name="Flow Reference" doc:id="f06eb9ce-3ba3-4eca-a834-a91f0d3fffcc" name="TravelOnTip-GetSchedules-implementationSub_Flow"/>
+				<flow-ref doc:name="Schedules" doc:id="f06eb9ce-3ba3-4eca-a834-a91f0d3fffcc" name="TravelOnTip-GetSchedules-implementationSub_Flow"/>
 			</when>
 			<otherwise >
 				<logger level="INFO" doc:name="Logger" doc:id="bc1d32e9-afcf-4b31-bc64-d1836015ab44" message="URI Parameter is not correct for TravelOnTip External System for TransactionId: #[vars.transactionId]"/>
